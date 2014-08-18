@@ -1,0 +1,147 @@
+2014jun02
+
+
+Exercício Programa 4.
+Descricao: Calcular a matriz de distancias via algoritmo de Dijkstra.
+
+Dica: 
+.Voce pode usar FilaPrioridade.java para ExtraiMinimo().
+
+Entrada: Um grafo em arquivo TXT.
+Saida:   Imprime a matriz de distancias.
+
+
+Sugestao: 
+Crie um modulo Dijkstra.java para o algoritmo de Dijkstra, 
+e um modulo mDists.java para o calculo da matriz de distancias.
+Desta forma,
+
+1) para compilar, execute:
+
+   javac mDists.java
+
+
+2) para rodar, execute:
+
+   java mDists grafoXX.txt
+
+--
+
+Exemplos:
+
+D:\java\ep4>java mDists grafo40.txt
+Entrada: grafo40.txt
+
+Listas de Adjacencia:
+1: 2(2) 4(3) 5(6)
+2: 1(2) 3(4) 4(3)
+3: 2(4) 4(7) 5(3)
+4: 1(3) 2(3) 3(7) 5(3)
+5: 1(6) 3(3) 4(3)
+
+Matriz de Adjacencia:
+. 2 . 3 6
+2 . 4 3 .
+. 4 . 7 3
+3 3 7 . 3
+6 . 3 3 .
+
+Total de vertices: 5
+Total de arcos: 16
+
+Matriz de distancias:
+0 2 6 3 6
+2 0 4 3 6
+6 4 0 6 3
+3 3 6 0 3
+6 6 3 3 0
+
+--
+
+D:\java\ep4>java mDists grafo41.txt
+Entrada: grafo41.txt
+
+Listas de Adjacencia:
+1: 2(1)
+2: 1(3) 3(1) 5(1)
+3: 4(2)
+4: 1(5) 5(1)
+5: 2(2)
+
+Matriz de Adjacencia:
+. 1 . . .
+3 . 1 . 1
+. . . 2 .
+5 . . . 1
+. 2 . . .
+
+Total de vertices: 5
+Total de arcos: 8
+
+Matriz de distancias:
+0 1 2 4 2
+3 0 1 3 1
+7 5 0 2 3
+5 3 4 0 1
+5 2 3 5 0
+
+--
+
+D:\java\ep4>java mDists grafo42.txt
+Entrada: grafo42.txt
+
+Listas de Adjacencia:
+1: 2(3) 4(5)
+2: 1(3) 3(1) 5(1)
+3: 2(1) 4(2)
+4: 1(5) 3(2) 5(1)
+5: 2(1) 4(1)
+
+Matriz de Adjacencia:
+. 3 . 5 .
+3 . 1 . 1
+. 1 . 2 .
+5 . 2 . 1
+. 1 . 1 .
+
+Total de vertices: 5
+Total de arcos: 12
+
+Matriz de distancias:
+0 3 4 5 4
+3 0 1 2 1
+4 1 0 2 2
+5 2 2 0 1
+4 1 2 1 0
+
+--
+
+D:\java\ep4>java mDists grafo659.txt
+Entrada: grafo659.txt
+
+Listas de Adjacencia:
+s: t(10) y(5)
+t: x(1) y(2)
+x: z(4)
+y: t(3) x(9) z(2)
+z: s(7) x(6)
+
+Matriz de Adjacencia:
+. 10 . 5 .
+. . 1 2 .
+. . . . 4
+. 3 9 . 2
+7 . 6 . .
+
+Total de vertices: 5
+Total de arcos: 10
+
+Matriz de distancias:
+0 8 9 5 7
+11 0 1 2 4
+11 19 0 16 4
+9 3 4 0 2
+7 15 6 12 0
+
+--
+

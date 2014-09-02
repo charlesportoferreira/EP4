@@ -25,7 +25,7 @@ public class EP4 {
      */
     public static void main(String[] args) {
         LerGrafoTXT leGrafo = new LerGrafoTXT();
-        Grafo grafo = leGrafo.LerArquivo("grafo42.txt");
+        Grafo grafo = leGrafo.LerArquivo(args[0]);
         System.out.println("\nMatriz de distâncias");
         for (int i = 0; i < grafo.getVertices().size(); i++) {
             dijkstra(grafo, grafo.getVertices().get(i));
